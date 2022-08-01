@@ -98,7 +98,7 @@ function App() {
         </section>
 
         <footer>
-          This website is developed by <a href="https://github.com/aamrits" target="_blank">Amrit</a>. &copy; {new Date().getFullYear()}
+          This website is developed by <a href="https://github.com/aamrits" target="_blank" rel="noreferrer">Amrit</a>. &copy; {new Date().getFullYear()}
         </footer>
       </div>
     </Router>
