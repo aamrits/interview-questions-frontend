@@ -10,16 +10,17 @@ function App() {
     <Router>
       <div className="dark">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark main-header">
-          <Link to="/" className='navbar-brand m-auto'>
-            Frontend Interview Questions
-          </Link>
-          {/* <a className="navbar-brand m-auto" href="index.html"></a> */}
+          <div class="container-fluid">
+            <Link to="/" className='navbar-brand m-auto'>
+              Frontend Interview Questions
+            </Link>
+          </div>
         </nav>
 
         <section>
           <div className="container">
             <div className="row">
-              <div className="col-5">
+              <div className="col-md-5 mb-3">
                 <div className="accordion" id="questions">
                   <div className="accordion-item">
                     <h2 className="accordion-header" id="headingArray">
@@ -84,7 +85,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="col-7">
+              <div className="col-md-7 mb-3">
                 <Routes>
                   <Route exact path='/' />
                   <Route path='/reverse-array' element={<ReverseArray />} />
