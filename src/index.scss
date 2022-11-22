@@ -22,38 +22,14 @@ General Styles
   box-sizing: border-box;
 }
 
-.dark {
+:root {
   --dark-grey: #1c313a;
   --grey: #455a64;
   --light-grey: #718792;
-  --dark-yellow: #c79100;
   --yellow: #ffc107;
-  --light-yellow: #fff350;
-  --white: #eeeeee;
+  --text: #eeeeee;
   --black: #424242;
   --black-shadow: #292929;
-}
-
-/***
-CUSTOM SCROLLBAR
-*/
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #eeeeee;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #424242;
-  border-radius: 20px;
-  border: 3px solid transparent;
-  background-clip: content-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #718792;
 }
 
 body {
@@ -62,8 +38,8 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  background-color: #455a64;
-  color: #eeeeee;
+  background-color: var(--grey);
+  color: var(--text);
   counter-reset: section;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -80,12 +56,24 @@ h1 {
 }
 
 a {
-  color: var(--white);
+  color: var(--text);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+}
+
+.bg-green {
+  background-color: #4CAF50;
+}
+
+.bg-orange {
+  background-color: #FF9800;
+}
+
+.bg-red {
+  background-color: #F44336;
 }
 
 .type--h1, .type--h2 {
@@ -105,29 +93,6 @@ a:hover {
   left: 0;
 }
 
-.main-header {
-  box-shadow: 0 0 10px var(--black-shadow);
-  margin-bottom: 20px;
-}
-
-.main-header .navbar-brand {
-  font-family: 'Kalam', cursive;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-size: 1.5em;
-  color: var(--black);
-  font-weight: 600;
-}
-
-.main-header .navbar-brand:hover {
-  color: var(--black);
-  text-decoration: none;
-}
-
-.bg-dark {
-  background: var(--yellow) !important;
-}
-
 .card-container__items ol {
   padding-left: 15px;
 }
@@ -138,13 +103,13 @@ a:hover {
 
 .card-container__items a {
   width: 20px;
-  color: var(--white);
+  color: var(--text);
   vertical-align: top;
 }
 
 .card-container__items a span i {
   width: 20px;
-  color: var(--white);
+  color: var(--text);
   vertical-align: top;
 }
 .card-container__items a span i.bi::before {
@@ -154,11 +119,14 @@ a:hover {
 }
 
 .badge.bg-custom-badge {
-  background-color: var(--dark-yellow);
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-left: 10px;
 }
 
+/* ==================================================================
+Quesions Sidebar Styles
+================================================================== */
 #questions {
   .accordion-body {
     padding: 0;
@@ -174,11 +142,11 @@ a:hover {
     text-transform: uppercase;
     letter-spacing: 1px;
     background-color: var(--dark-grey);
-    color: var(--white);
+    color: var(--text);
   }
 
   .accordion-button:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+    box-shadow: 0 0 0 0.25rem var(--black-shadow);
   }
 
   ul.list-group {
@@ -198,7 +166,7 @@ a:hover {
   }
   
   a {
-    color: var(--white);
+    color: var(--text);
     text-decoration: none;
   }
   
@@ -207,6 +175,9 @@ a:hover {
   }
 }
 
+/* ==================================================================
+Gist Styles
+================================================================== */
 .gist__title {
   display: none;
 }
@@ -220,16 +191,26 @@ a:hover {
   margin-bottom:  0;
 }
 
-footer { 
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  background-color: var(--light-grey);
-  padding: 4px 0;
-  a {
-    text-decoration: underline;
-  }
+/* ==================================================================
+Custom Scrollbar
+================================================================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--text);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--black);
 }
 
 /* ==================================================================

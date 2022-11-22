@@ -4,8 +4,8 @@ import ReactEmbedGist from 'react-embed-gist';
 const MoveNegativeToLeft = () => {
   return (
     <div>
-      <div class="container">
-        <h1 class="type--h1">Move all negative numbers to beginning and positive to end.</h1>
+      <div className="container">
+        <h1 className="type--h1">Move all negative numbers to beginning and positive to end.</h1>
         <ReactEmbedGist
           gist="aamrits/004261b497b622eaeebe7d732a947fce"
           wrapperClass="gist__bash"
