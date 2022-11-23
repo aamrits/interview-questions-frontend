@@ -38,7 +38,7 @@ function App() {
                         <div className="accordion-item" key={topic.id}>
                           <h2 className="accordion-header" id="headingArray">
                             <button
-                              className="accordion-button"
+                              className="accordion-button collapsed"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target={"#" + topic.topic_id}
