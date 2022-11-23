@@ -42,7 +42,7 @@ function App() {
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target={"#" + topic.topic_id}
-                              aria-expanded="true"
+                              aria-expanded="false"
                               aria-controls={topic.topic_id}
                             >
                               {topic.topic_name}
